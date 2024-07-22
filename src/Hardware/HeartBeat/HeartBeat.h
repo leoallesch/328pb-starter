@@ -11,6 +11,6 @@ typedef struct
   Timer_t timer;
 } HeartBeat_t;
 
-void HeartBeat_Init(HeartBeat_t *self, TimerGroup_t *timerGroup);
+void HeartBeat_Init(HeartBeat_t *self, TimerGroup_t *timerGroup, IOPort_t port, IOPin_t pin, TimerTicks_t period);
 
 #endif

@@ -7,6 +7,7 @@
 typedef struct
 {
   I_DigitalInput_t interface;
+
   IOPort_t port;
   IOPin_t pin;
 } DigitalInput_t;

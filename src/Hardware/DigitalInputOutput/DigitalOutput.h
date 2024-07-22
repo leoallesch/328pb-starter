@@ -2,15 +2,15 @@
 #define DIGITALOUTPUT_H
 
 #include "I_DigitalOutput.h"
-#include <stdint.h>
+#include "Typedefs_IO.h"
 
 typedef struct
 {
   I_DigitalOutput_t interface;
-  volatile uint8_t *port;
-  uint8_t pin;
+  IOPort_t port;
+  IOPin_t pin;
 } DigitalOutput_t;
 
-void DigitalOutput_Init(DigitalOutput_t *self, volatile uint8_t *port, uint8_t pin);
+void DigitalOutput_Init(DigitalOutput_t *self, IOPort_t port, IOPin_t pin);
 
 #endif

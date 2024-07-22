@@ -6,19 +6,20 @@ AVRDUDE = avrdude
 # Microcontroller specific settings
 MCU = atmega328pb
 F_CPU = 16000000UL
-BAUD = 9600
 
 # Programmer settings
 PROGRAMMER = xplainedmini
 
 # Define the target executable name and build directory
-TARGET_NAME = test
+TARGET_NAME = target
 BUILD_DIR = build
 TARGET = $(BUILD_DIR)/${TARGET_NAME}.elf
 HEX = $(BUILD_DIR)/${TARGET_NAME}.hex
 
 # Define the source directory
-SRC_DIRS ?= src lib/EmbeddedCommon/src
+SRC_DIRS ?= \
+	src \
+	lib/EmbeddedCommon/src
 
 # Find all source files in the source directory and subdirectories
 SRCS := $(shell find $(SRC_DIRS) -name '*.cpp' -or -name '*.c' -or -name '*.s')
@@ -42,7 +43,7 @@ BUILD_DEPS += $(MAKEFILE_LIST)
 # Main target
 .PHONY: all 
 
-all: $(TARGET)
+all: $(HEX)
 
 # Run target
 .PHONY: run

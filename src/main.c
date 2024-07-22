@@ -1,5 +1,5 @@
 #include "Application.h"
-#include "328pb_TimeSource.h"
+#include "TimeSource.h"
 
 static TimerGroup_t timerGroup;
 static Application_t application;

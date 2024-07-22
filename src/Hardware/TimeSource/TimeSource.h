@@ -1,5 +1,5 @@
-#ifndef _328PB_TIMESOURCE_H
-#define _328PB_TIMESOURCE_H
+#ifndef TIMESOURCE_H
+#define TIMESOURCE_H
 
 #include "I_TimeSource.h"
 

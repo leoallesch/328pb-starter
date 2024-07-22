@@ -1,4 +1,4 @@
-#include "328pb_TimeSource.h"
+#include "TimeSource.h"
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
